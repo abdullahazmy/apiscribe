@@ -20,6 +20,8 @@ Documented 14 endpoints in 5 files. ⚠️ POST /auth/login has no rate limiting
 ✓ api-docs/dist/API_DOCUMENTATION.pdf
 ```
 
+> **Also available in Go and Rust.** The same tool ships as a single native binary, with no Node.js needed, in [apiscribe-go](https://github.com/abdullahazmy/apiscribe-go) and [apiscribe-rs](https://github.com/abdullahazmy/apiscribe-rs). All three versions use the same prompts and commands and produce the same output. Prebuilt binaries for Linux, macOS, and Windows are on each repo's Releases page.
+
 ## Install
 
 ```bash
