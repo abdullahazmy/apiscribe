@@ -10,7 +10,8 @@ import { resolveConfig, EFFORTS, type Config, type Effort } from "./config.js";
 import { ALL_FORMATS, exportDocs, type ExportFormat } from "./export.js";
 import { isImagePath, loadClipboardImage, loadImageFile, parsePathArgs, type LoadedImage } from "./image.js";
 import { endpointPrompt, imagePrompt, scanPrompt } from "./prompts.js";
-import { accent, banner, dim, errorLine, okLine } from "./ui.js";
+import { printBanner } from "./banner.js";
+import { accent, dim, errorLine, okLine } from "./ui.js";
 
 const VERSION = "0.1.0";
 
@@ -139,7 +140,7 @@ async function handleLine(line: string, cfg: Config, agent: Agent): Promise<"exi
 
 async function repl(cfg: Config) {
   const agent = new Agent(cfg);
-  banner(cfg.projectRoot, cfg.docsDir, cfg.model);
+  printBanner({ version: VERSION, model: cfg.model, effort: cfg.effort, projectRoot: cfg.projectRoot, docsDir: cfg.docsDir });
 
   const rl = readline.createInterface({
     input: process.stdin,

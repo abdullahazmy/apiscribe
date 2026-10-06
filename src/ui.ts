@@ -30,18 +30,6 @@ export class Spinner {
   }
 }
 
-export function banner(projectRoot: string, docsDir: string, model: string) {
-  const line = accent("─".repeat(58));
-  console.log(line);
-  console.log(`${accent("✻")} ${chalk.bold("apiscribe")} ${dim("— API docs for frontend & mobile teams, powered by Claude")}`);
-  console.log(dim(`  project: ${projectRoot}`));
-  console.log(dim(`  docs:    ${docsDir}`));
-  console.log(dim(`  model:   ${model}`));
-  console.log(line);
-  console.log(dim("  /scan to document every endpoint · /image to map a screen to APIs · /help"));
-  console.log();
-}
-
 export function toolLine(name: string, detail: string) {
   console.log(`${accent("●")} ${chalk.bold(name)}${dim("(")}${detail}${dim(")")}`);
 }
