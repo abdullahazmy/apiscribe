@@ -1,0 +1,51 @@
+{
+  "name": "apiscribe",
+  "version": "0.1.0",
+  "description": "AI CLI (built on Claude) that documents your backend APIs for frontend & mobile developers",
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "api",
+    "documentation",
+    "claude",
+    "cli",
+    "backend"
+  ],
+  "author": "Abdullah Azmy",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "chalk": "^6.0.1",
+    "commander": "^15.0.0",
+    "highlight.js": "^11.12.0",
+    "marked": "^18.1.0",
+    "marked-highlight": "^2.2.4",
+    "puppeteer-core": "^25.12.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "bin": {
+    "apiscribe": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullahazmy/apiscribe.git"
+  },
+  "homepage": "https://github.com/abdullahazmy/apiscribe#readme"
+}
